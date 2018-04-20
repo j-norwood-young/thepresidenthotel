@@ -4,17 +4,6 @@ var _ = require('lodash');
 // require("jquery-hotspot");
 require('waypoints/lib/noframework.waypoints.min');
 
-document.addEventListener('DOMContentLoaded', function() {
-	// do your setup here
-	var waypoint = new Waypoint({
-		element: document.getElementsByClassName('headline')[0],
-		handler: (direction) => {
-			console.log('waypoint', direction);
-		},
-	});
-});
-
-
 $(function() {
 	var hotspots = [
 	{
@@ -117,7 +106,6 @@ $(function() {
 				$(hotspot.element).removeClass("show-overlay");
 				$(".hotspot").css("opacity", 0.6);
 			});
-			console.log(el);
 			$(hotspot.container).prepend(el);
 		});
 	};
@@ -125,20 +113,6 @@ $(function() {
 	$( window ).resize(function() {
 		setHotspots();
 	});
-
-	// var waypoint1_in = new Waypoint({
-	// 	element: document.getElementById('hotspotMobileOverlay1'),
-	// 	handler: (direction) => {
-	// 		// $("#hotspotMobileText1").addClass("show-text-overlay");
-	// 		console.log('waypoint1_in', direction);
-	// 		if (direction === "down") {
-	// 			$("#hotspotMobileText1").addClass("show-text-overlay");
-	// 		} else {
-	// 			$("#hotspotMobileText1").removeClass("show-text-overlay");
-	// 		}
-	// 	},
-	// 	offset: '80%'
-	// });
 
 	function selectionToArray(selection) {
 		var len = selection.length;
@@ -151,13 +125,11 @@ $(function() {
 
 	var triggers = selectionToArray(document.getElementsByClassName("trigger"));
 
-	console.log(triggers);
 	var waypoints = triggers.map(function(trigger) {
 		var step = +trigger.getAttribute('data-step');
 		return new Waypoint({
 			element: trigger,
 			handler: function(direction) {
-				console.log({ step, direction });
 				if (step === "3" && direction === "down") {
 					$(`.overlay-text`).removeClass("is-fixed");
 					$(`.overlay-text-container`).removeClass("show-text-overlay");
@@ -185,7 +157,6 @@ $(function() {
 	var bottomWaypoint = new Waypoint({
 		element: document.getElementById("bottom"),
 		handler: function(direction) {
-			console.log("bottom");
 			$(`.overlay-text`).removeClass("is-fixed");
 			$(`.overlay-text-container`).removeClass("show-text-overlay");
 			$(`.overlay`).removeClass("show-overlay");
