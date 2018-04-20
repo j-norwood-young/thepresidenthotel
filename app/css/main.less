@@ -1,0 +1,297 @@
+body {
+	background-color: white;
+	margin: 0px;
+}
+
+.container {
+	width: 100vw;
+	padding-top: 60px;
+	overflow-x: hidden;
+}
+
+p, ul {
+	font-family: 'Tajawal', sans-serif;
+	font-size: 14pt;
+}
+
+ul {
+	line-height: 120%;
+	font-size: 12pt;
+
+	li {
+		margin-bottom: 20px;
+	}
+}
+
+#header {
+	
+	width: 100%;
+	box-shadow: 0px 2px 3px 0px rgba(40, 40, 40, 0.1);
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-color: #f7f7f7;
+	z-index: 100;
+	
+	#header-container {
+		/*max-width: 1024px;*/
+		margin: 0px auto;
+		padding: 10px 20px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		img {
+			max-height: 40px;
+		}
+	}
+
+	#dmlogo {
+		height: 27px;
+		margin-top: 6px;
+	}
+
+	#sponsorLogoContainer {
+		font-weight: bold;
+		font-family: sans-serif;
+		text-transform: uppercase;
+		font-size: 8pt;
+		display: inline-block;
+		img {
+			vertical-align: middle;
+		}
+		#paidFor {
+			margin-right: 15px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+}
+
+.parallax {
+	height: 90vh;
+	width: 100%;
+	margin-bottom: 50px;
+	overflow: hidden;
+	background-attachment: fixed;
+	background-image: url("images/top.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#topimg {
+	background-image: url("images/MainHeaderImage.jpg");
+	margin-bottom: 85px;
+}
+
+#bottomimg {
+	background-image: url("images/defoe.jpg");	
+	height: 100vh;
+}
+
+#video {
+	width: 100%;
+	height: auto;
+}
+
+.body-text {
+	max-width: 600px;
+	margin: 0px auto;
+
+	img {
+		max-width: 100%;
+	}
+}
+
+.full-width {
+	img {
+		width: 100vw;
+	}
+}
+
+.drop-cap {
+	font-family: 'Playfair Display', serif;
+	float: left;
+	line-height: 46px;
+	font-size: 50px;
+	margin-top: -5px;
+	margin-right: 1px;
+	margin-left: -8px;
+}
+
+.headline {
+	font-size: 60pt;
+	text-align: center;
+	margin: 20px auto 85px auto;
+	font-weight: 600;
+	line-height: 55pt;
+	max-width: 800px;
+}
+
+.headline, .pull-quote {
+	font-family: 'Anton', serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	line-height: 100%;
+}
+
+
+.pull-quote {
+	width: 200px;
+	font-size: 25px;
+	line-height: 32px;
+}
+
+.pull-quote-right {
+	float: right;
+    margin-right: -80px;
+    margin-left: 20px;
+}
+
+.pull-quote-left {
+	float: left;
+	margin-left: -80px;
+	margin-right: 20px;
+}
+
+footer {
+	p {
+		font-size: 12pt;	
+	}
+	
+	margin: 20px;
+	text-align: center;
+}
+
+#topimg {
+	/*margin-left: -100vw;*/
+	/*background-color: #000;*/
+}
+
+#presidentContainer {
+	width: 100vw;
+	
+	.overlay {
+		position: absolute;
+		opacity: 0;
+		transition: opacity 0.5s ease-in-out;
+	}
+
+	.show-overlay {
+		opacity: 1;
+		
+	}
+
+	.hotspot {
+		position: absolute;
+		opacity: 0.8;
+		border: 5px #bfecfd solid;
+		z-index: 99;
+		transition: opacity 0.5s ease-in-out;
+	}
+
+
+}
+
+.is-fixed {
+	position: fixed !important;
+	top: 25%;
+}
+
+#presidentMobileContainer {
+	background-image: url("images/mobile/PresidentHotelMainImageMobile.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 300vh;
+	
+	.overlay-text-container {
+		opacity: 0;
+		transition: opacity 0.5s ease-in-out;
+		height: 75vh;
+	}
+
+	.overlay-text {
+		color: white;
+		background-color: rgba(40,40,40,0.7);
+		position: absolute;
+		width: 80%;
+		margin-left: 10%;
+		margin-top: 50px;
+		border: 1px rgba(180,180,180,0.4) solid;
+		ul {
+			padding: 10px 40px 0px 40px;
+		}
+	}
+
+	.show-text-overlay, .show-overlay {
+		opacity: 1;
+	}
+
+	.overlay {
+		position: fixed;
+		top: 80px;
+	}
+}
+
+// Media specific
+// Desktop
+@media screen and (min-width: 737px) {
+	.show-mobile {
+		display: none;
+	}
+
+	.hide-desktop {
+		display: none;
+	}
+}
+
+// Tablet
+@media screen and (max-width: 736px) {
+	.pull-quote-right, .pull-quote-left {
+		float: none;
+		width: 100%;
+		margin: 20px 0px;
+		clear: both;
+		text-align: center;
+	}
+
+	.body-text {
+		margin: 0px 100px;
+		// width: 100%;
+		max-width: none;
+		display: block;
+	}
+
+	#bottomimg {
+		background-size: 100%;
+		background-position-y: 50px;
+	}
+
+	.hide-mobile {
+		display: none;
+	}
+
+	.show-desktop {
+		display: none;
+	}
+}
+
+// Mobile
+@media screen and (max-width: 480px) {
+	.body-text {
+		margin: 0px 60px;
+	}
+
+	#video {
+		height: auto;
+	}
+
+	/*.parallax, #topimg, #bottomimg {
+		height: 70vh;
+		background-size: 100%;
+		background-color: #0e0e0e;
+	}*/
+
+}
