@@ -216,7 +216,7 @@ footer p {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   height: 300vh;
   margin: 40px 0px 60px 0px;
 }
@@ -248,7 +248,7 @@ footer p {
 /* line 246, app/css/main.less */
 #presidentMobileContainer .overlay {
   position: fixed;
-  top: 80px;
+  top: 40px;
 }
 @media screen and (min-width: 737px) {
   /* line 255, app/css/main.less */
@@ -342,10 +342,10 @@ footer p {
   }
   /* line 345, app/css/main.less */
   #sponsorMobileContainer {
-    background-image: url("images/mobile/MobileHeader.jpg");
-    height: 41px;
+    background-image: url("images/mobile/MobileHeader2.jpg");
+    height: 38px;
     text-align: center;
-    padding-top: 5px;
+    padding-top: 8px;
   }
   /* line 350, app/css/main.less */
   #sponsorMobileContainer img {
