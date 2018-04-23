@@ -346,8 +346,9 @@ footer p {
     height: 38px;
     text-align: center;
     padding-top: 8px;
+    box-shadow: 0px 0px 3px 3px rgba(50, 50, 50, 0.3);
   }
-  /* line 350, app/css/main.less */
+  /* line 351, app/css/main.less */
   #sponsorMobileContainer img {
     height: 30px;
   }
