@@ -85,7 +85,7 @@ ul li {
 /* line 82, app/css/main.less */
 #topimg {
   background-image: url("images/MainHeaderImage.jpg");
-  margin-bottom: 85px;
+  margin-bottom: 70px;
 }
 /* line 87, app/css/main.less */
 #bottomimg {
@@ -117,7 +117,7 @@ ul li {
   line-height: 46px;
   font-size: 50px;
   margin-top: -5px;
-  margin-right: 1px;
+  margin-right: 3px;
   margin-left: -8px;
 }
 /* line 122, app/css/main.less */
@@ -137,53 +137,61 @@ ul li {
   text-transform: uppercase;
   line-height: 100%;
 }
-/* line 139, app/css/main.less */
+/* line 138, app/css/main.less */
+.blurb {
+  font-weight: 700;
+  font-family: 'Tajawal', sans-serif;
+  margin-bottom: 40px;
+  line-height: 112%;
+  font-size: 17pt;
+}
+/* line 147, app/css/main.less */
 .pull-quote {
   width: 200px;
   font-size: 25px;
   line-height: 32px;
 }
-/* line 145, app/css/main.less */
+/* line 153, app/css/main.less */
 .pull-quote-right {
   float: right;
   margin-right: -80px;
   margin-left: 20px;
 }
-/* line 151, app/css/main.less */
+/* line 159, app/css/main.less */
 .pull-quote-left {
   float: left;
   margin-left: -80px;
   margin-right: 20px;
 }
-/* line 157, app/css/main.less */
+/* line 165, app/css/main.less */
 footer {
   margin: 20px;
   text-align: center;
 }
-/* line 158, app/css/main.less */
+/* line 166, app/css/main.less */
 footer p {
   font-size: 12pt;
 }
-/* line 166, app/css/main.less */
+/* line 174, app/css/main.less */
 #topimg {
   /*margin-left: -100vw;*/
   /*background-color: #000;*/
 }
-/* line 171, app/css/main.less */
+/* line 179, app/css/main.less */
 #presidentContainer {
   width: 100vw;
 }
-/* line 174, app/css/main.less */
+/* line 182, app/css/main.less */
 #presidentContainer .overlay {
   position: absolute;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
-/* line 180, app/css/main.less */
+/* line 188, app/css/main.less */
 #presidentContainer .show-overlay {
   opacity: 1;
 }
-/* line 185, app/css/main.less */
+/* line 193, app/css/main.less */
 #presidentContainer .hotspot {
   position: absolute;
   opacity: 0.8;
@@ -191,12 +199,12 @@ footer p {
   z-index: 99;
   transition: opacity 0.5s ease-in-out;
 }
-/* line 196, app/css/main.less */
+/* line 204, app/css/main.less */
 .is-fixed {
   position: fixed !important;
   top: 25%;
 }
-/* line 201, app/css/main.less */
+/* line 209, app/css/main.less */
 #presidentMobileContainer {
   background-image: url("images/mobile/PresidentHotelMainImageMobile.jpg");
   background-attachment: fixed;
@@ -204,14 +212,15 @@ footer p {
   background-repeat: no-repeat;
   background-size: cover;
   height: 300vh;
+  margin: 40px 0px 60px 0px;
 }
-/* line 209, app/css/main.less */
+/* line 218, app/css/main.less */
 #presidentMobileContainer .overlay-text-container {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
   height: 75vh;
 }
-/* line 215, app/css/main.less */
+/* line 224, app/css/main.less */
 #presidentMobileContainer .overlay-text {
   color: white;
   background-color: rgba(40, 40, 40, 0.7);
@@ -221,32 +230,32 @@ footer p {
   margin-top: 50px;
   border: 1px rgba(180, 180, 180, 0.4) solid;
 }
-/* line 223, app/css/main.less */
+/* line 232, app/css/main.less */
 #presidentMobileContainer .overlay-text ul {
   padding: 10px 40px 0px 40px;
 }
-/* line 228, app/css/main.less */
+/* line 237, app/css/main.less */
 #presidentMobileContainer .show-text-overlay,
 #presidentMobileContainer .show-overlay {
   opacity: 1;
 }
-/* line 232, app/css/main.less */
+/* line 241, app/css/main.less */
 #presidentMobileContainer .overlay {
   position: fixed;
   top: 80px;
 }
 @media screen and (min-width: 737px) {
-  /* line 241, app/css/main.less */
+  /* line 250, app/css/main.less */
   .show-mobile {
     display: none;
   }
-  /* line 245, app/css/main.less */
+  /* line 254, app/css/main.less */
   .hide-desktop {
     display: none;
   }
 }
 @media screen and (max-width: 736px) {
-  /* line 252, app/css/main.less */
+  /* line 261, app/css/main.less */
   .pull-quote-right,
   .pull-quote-left {
     float: none;
@@ -255,34 +264,60 @@ footer p {
     clear: both;
     text-align: center;
   }
-  /* line 260, app/css/main.less */
+  /* line 269, app/css/main.less */
   .body-text {
     margin: 0px 100px;
     max-width: none;
     display: block;
   }
-  /* line 267, app/css/main.less */
+  /* line 276, app/css/main.less */
   #bottomimg {
     background-size: 100%;
     background-position-y: 50px;
   }
-  /* line 272, app/css/main.less */
+  /* line 281, app/css/main.less */
   .hide-mobile {
     display: none;
   }
-  /* line 276, app/css/main.less */
+  /* line 285, app/css/main.less */
   .show-desktop {
     display: none;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 283, app/css/main.less */
+  /* line 292, app/css/main.less */
   .body-text {
     margin: 0px 60px;
   }
-  /* line 287, app/css/main.less */
+  /* line 296, app/css/main.less */
   #video {
     height: auto;
+  }
+  /* line 300, app/css/main.less */
+  .headline {
+    font-size: 40pt;
+    margin: 20px auto 46px auto;
+  }
+  /* line 305, app/css/main.less */
+  .parallax {
+    height: 358px;
+    width: 100%;
+    margin-bottom: 50px;
+    overflow: hidden;
+    background-attachment: fixed;
+    background-image: url(images/top.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 759px;
+    background-position-y: 44px;
+  }
+  /* line 318, app/css/main.less */
+  #topimg {
+    margin-bottom: 50px;
+  }
+  /* line 322, app/css/main.less */
+  #presidentMobileContainer {
+    margin-top: 0px;
   }
   /*.parallax, #topimg, #bottomimg {
 		height: 70vh;
