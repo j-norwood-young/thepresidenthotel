@@ -19282,6 +19282,7 @@ $(function() {
 				$(`.overlay-text`).removeClass("is-fixed");
 				$(`.overlay-text-container`).removeClass("show-text-overlay");
 				$(`.overlay`).removeClass("show-overlay");
+				return;
 				if (direction === "down") {
 					$(`#hotspotMobileText${ step + 1 } > .overlay-text`).addClass("is-fixed");
 					$(`#hotspotMobileText${ step + 1 }`).addClass("show-text-overlay");
@@ -19293,19 +19294,52 @@ $(function() {
 				}
 
 			},
-			offset: "25%"
+			offset: "50%"
 		});
 	});
 
-	var bottomWaypoint = new Waypoint({
-		element: document.getElementById("bottom"),
-		handler: function(direction) {
-			$(`.overlay-text`).removeClass("is-fixed");
-			$(`.overlay-text-container`).removeClass("show-text-overlay");
-			$(`.overlay`).removeClass("show-overlay");
-		},
-		offset: "90%"
-	});
+	// var topMobileWaypoint = new Waypoint({
+	// 	element: document.getElementById("presidentMobileContainer"),
+	// 	handler: direction => {
+	// 		if (direction === "down") {
+	// 			$("#presidentMobileBackground").addClass("is-fixed");
+	// 		} else {
+	// 			$("#presidentMobileBackground").removeClass("is-fixed");
+	// 		}
+	// 	},
+	// 	offset: "0%"
+	// });
+
+	// var bottomWaypoint = new Waypoint({
+	// 	element: document.getElementById("bottom"),
+	// 	handler: function(direction) {
+	// 		if (direction === "down") {
+	// 			$("#presidentMobileBackground").removeClass("is-fixed");
+	// 			$("#presidentMobileBackground").css("bottom", "0px");
+	// 		}
+	// 		$(`.overlay-text`).removeClass("is-fixed");
+	// 		$(`.overlay-text-container`).removeClass("show-text-overlay");
+	// 		$(`.overlay`).removeClass("show-overlay");
+	// 	},
+	// 	offset: "0%"
+	// });
+
+	var stickMobile = function() {
+		var top = $("#presidentMobileContainer")[0].offsetTop;
+		var bottom = $("#bottom")[0].offsetTop;
+		var scrollTop = window.pageYOffset;
+		var scrollBottom = scrollTop + $(window).height();
+		var height = $("#presidentMobileContainer")[0].clientHeight;
+		console.log({bottom, scrollTop, scrollBottom});
+		if ((scrollTop >= top) && (bottom > scrollBottom)) {
+			$("#presidentMobileBackground").addClass("is-fixed");
+			$("#presidentMobileBackground").css("margin-top", 0);
+		} else if (bottom < scrollBottom) {
+			$("#presidentMobileBackground").css("margin-top", bottom - scrollBottom);
+		} else {
+			$("#presidentMobileBackground").removeClass("is-fixed");
+		}
+	};
 
 	var stickHeader = function() {
 		var stickyHeaderEl = $("#sponsorMobileContainer");
@@ -19315,7 +19349,7 @@ $(function() {
 			stickyHeaderEl.removeClass("presidentMobileContainer-fixed");
 		}
 	};
-	window.onscroll = function() {stickHeader()};
+	window.onscroll = function() {stickHeader(); stickMobile();};
 });
 
 });

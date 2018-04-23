@@ -210,58 +210,18 @@ footer p {
   position: fixed !important;
   top: 25%;
 }
-/* line 214, app/css/main.less */
-#presidentMobileContainer {
-  background-image: url("images/mobile/PresidentHotelMainImageMobile.jpg");
-  background-attachment: initial;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  margin: 40px 0px 60px 0px;
-}
-/* line 223, app/css/main.less */
-#presidentMobileContainer .overlay-text-container {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  height: 75vh;
-}
-/* line 229, app/css/main.less */
-#presidentMobileContainer .overlay-text {
-  color: white;
-  background-color: rgba(40, 40, 40, 0.7);
-  position: absolute;
-  width: 80%;
-  margin-left: 10%;
-  margin-top: 50px;
-  border: 1px rgba(180, 180, 180, 0.4) solid;
-}
-/* line 237, app/css/main.less */
-#presidentMobileContainer .overlay-text ul {
-  padding: 10px 40px 0px 40px;
-}
-/* line 242, app/css/main.less */
-#presidentMobileContainer .show-text-overlay,
-#presidentMobileContainer .show-overlay {
-  opacity: 1;
-}
-/* line 246, app/css/main.less */
-#presidentMobileContainer .overlay {
-  position: fixed;
-  top: 40px;
-}
 @media screen and (min-width: 737px) {
-  /* line 255, app/css/main.less */
+  /* line 219, app/css/main.less */
   .show-mobile {
     display: none;
   }
-  /* line 259, app/css/main.less */
+  /* line 223, app/css/main.less */
   .hide-desktop {
     display: none;
   }
 }
 @media screen and (max-width: 736px) {
-  /* line 266, app/css/main.less */
+  /* line 230, app/css/main.less */
   .pull-quote-right,
   .pull-quote-left {
     float: none;
@@ -270,49 +230,49 @@ footer p {
     clear: both;
     text-align: center;
   }
-  /* line 274, app/css/main.less */
+  /* line 238, app/css/main.less */
   .body-text {
     margin: 0px 100px;
     max-width: none;
     display: block;
   }
-  /* line 281, app/css/main.less */
+  /* line 245, app/css/main.less */
   #bottomimg {
     background-size: 100%;
     background-position-y: 50px;
   }
-  /* line 286, app/css/main.less */
+  /* line 250, app/css/main.less */
   .hide-mobile {
     display: none;
   }
-  /* line 290, app/css/main.less */
+  /* line 254, app/css/main.less */
   .show-desktop {
     display: none;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 297, app/css/main.less */
+  /* line 261, app/css/main.less */
   .body-text {
     margin: 0px 60px;
   }
-  /* line 301, app/css/main.less */
+  /* line 265, app/css/main.less */
   #header {
     position: absolute;
   }
-  /* line 304, app/css/main.less */
+  /* line 268, app/css/main.less */
   #header #header-container img {
     max-height: 26px;
   }
-  /* line 308, app/css/main.less */
+  /* line 272, app/css/main.less */
   #video {
     height: auto;
   }
-  /* line 312, app/css/main.less */
+  /* line 276, app/css/main.less */
   .headline {
     font-size: 40pt;
     margin: 20px auto 46px auto;
   }
-  /* line 317, app/css/main.less */
+  /* line 281, app/css/main.less */
   .parallax {
     height: 358px;
     width: 100%;
@@ -325,22 +285,72 @@ footer p {
     background-size: 759px;
     background-position-y: 44px;
   }
-  /* line 330, app/css/main.less */
+  /* line 294, app/css/main.less */
   #topimg {
     margin-bottom: 50px;
   }
-  /* line 334, app/css/main.less */
-  #presidentMobileContainer {
-    margin-top: 0px;
+  /* line 298, app/css/main.less */
+  #presidentMobileBackground {
+    background-image: url("images/mobile/PresidentHotelMainImageMobile.jpg");
+    background-attachment: initial;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
   }
-  /* line 338, app/css/main.less */
-  .presidentMobileContainer-fixed {
+  /* line 309, app/css/main.less */
+  .sticky {
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    top: 15px;
+  }
+  /* line 317, app/css/main.less */
+  #presidentMobileContainer {
+    margin: 40px 0px 60px 0px;
+  }
+  /* line 322, app/css/main.less */
+  #presidentMobileContainer .overlay-text-container {
+    /*opacity: 0;*/
+    transition: opacity 0.5s ease-in-out;
+    height: 75vh;
+  }
+  /* line 328, app/css/main.less */
+  #presidentMobileContainer .overlay-text {
+    color: white;
+    background-color: rgba(40, 40, 40, 0.7);
+    position: absolute;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 50px;
+    border: 1px rgba(180, 180, 180, 0.4) solid;
+  }
+  /* line 336, app/css/main.less */
+  #presidentMobileContainer .overlay-text ul {
+    padding: 10px 40px 0px 40px;
+  }
+  /* line 341, app/css/main.less */
+  #presidentMobileContainer .show-text-overlay,
+  #presidentMobileContainer .show-overlay {
+    opacity: 1;
+  }
+  /* line 345, app/css/main.less */
+  #presidentMobileContainer .overlay {
+    position: fixed;
+    top: 0px;
+    height: 100vh;
+  }
+  /* line 352, app/css/main.less */
+  .is-fixed {
     position: fixed;
     top: 0px;
     left: 0px;
     width: 100vw;
   }
-  /* line 345, app/css/main.less */
+  /* line 359, app/css/main.less */
   #sponsorMobileContainer {
     /*position: fixed;*/
     top: 0px;
@@ -352,7 +362,7 @@ footer p {
     padding-top: 8px;
     box-shadow: 0px 0px 3px 3px rgba(50, 50, 50, 0.3);
   }
-  /* line 355, app/css/main.less */
+  /* line 369, app/css/main.less */
   #sponsorMobileContainer img {
     height: 30px;
   }

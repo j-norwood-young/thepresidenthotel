@@ -211,43 +211,7 @@ footer {
 	top: 25%;
 }
 
-#presidentMobileContainer {
-	background-image: url("images/mobile/PresidentHotelMainImageMobile.jpg");
-	background-attachment: initial;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 100vh;
-	margin: 40px 0px 60px 0px;
 
-	.overlay-text-container {
-		opacity: 0;
-		transition: opacity 0.5s ease-in-out;
-		height: 75vh;
-	}
-
-	.overlay-text {
-		color: white;
-		background-color: rgba(40,40,40,0.7);
-		position: absolute;
-		width: 80%;
-		margin-left: 10%;
-		margin-top: 50px;
-		border: 1px rgba(180,180,180,0.4) solid;
-		ul {
-			padding: 10px 40px 0px 40px;
-		}
-	}
-
-	.show-text-overlay, .show-overlay {
-		opacity: 1;
-	}
-
-	.overlay {
-		position: fixed;
-		top: 40px;
-	}
-}
 
 // Media specific
 // Desktop
@@ -330,12 +294,62 @@ footer {
 	#topimg {
 		margin-bottom: 50px;
 	}
-
-	#presidentMobileContainer {
-		margin-top: 0px;
+	
+	#presidentMobileBackground {
+		background-image: url("images/mobile/PresidentHotelMainImageMobile.jpg");
+		background-attachment: initial;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 100vh;
+		width: 100vw;
+		position: absolute;
 	}
 
-	.presidentMobileContainer-fixed {
+	.sticky {
+		position: -webkit-sticky;
+		position: -moz-sticky;
+		position: -ms-sticky;
+		position: -o-sticky;
+		top: 15px;
+	}
+
+	#presidentMobileContainer {
+		margin: 40px 0px 60px 0px;
+
+		
+
+		.overlay-text-container {
+			/*opacity: 0;*/
+			transition: opacity 0.5s ease-in-out;
+			height: 75vh;
+		}
+
+		.overlay-text {
+			color: white;
+			background-color: rgba(40,40,40,0.7);
+			position: absolute;
+			width: 80%;
+			margin-left: 10%;
+			margin-top: 50px;
+			border: 1px rgba(180,180,180,0.4) solid;
+			ul {
+				padding: 10px 40px 0px 40px;
+			}
+		}
+
+		.show-text-overlay, .show-overlay {
+			opacity: 1;
+		}
+
+		.overlay {
+			position: fixed;
+			top: 0px;
+			height: 100vh;
+		}
+	}
+
+	.is-fixed {
 		position: fixed;
 		top: 0px;
 		left: 0px;
