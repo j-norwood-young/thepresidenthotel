@@ -73,7 +73,7 @@ ul {
 	width: 100%;
 	margin-bottom: 50px;
 	overflow: hidden;
-	background-attachment: fixed;
+	background-attachment: scroll;
 	background-image: url("images/top.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
@@ -293,6 +293,7 @@ footer {
 
 	#topimg {
 		margin-bottom: 50px;
+		margin-top: -10px;
 	}
 	
 	#presidentMobileBackground {
@@ -315,22 +316,24 @@ footer {
 	}
 
 	#presidentMobileContainer {
-		margin: 40px 0px 60px 0px;
+		margin: 20px 0px 120px 0px;
 
 		
 
 		.overlay-text-container {
-			/*opacity: 0;*/
+			opacity: 1;
 			transition: opacity 0.5s ease-in-out;
 			height: 75vh;
+
+
 		}
 
 		.overlay-text {
 			color: white;
 			background-color: rgba(40,40,40,0.7);
 			position: absolute;
-			width: 80%;
-			margin-left: 10%;
+			width: 65%;
+			margin-left: 5%;
 			margin-top: 50px;
 			border: 1px rgba(180,180,180,0.4) solid;
 			ul {
@@ -340,12 +343,25 @@ footer {
 
 		.show-text-overlay, .show-overlay {
 			opacity: 1;
+			.overlay {
+				opacity: 1;
+			}
 		}
 
 		.overlay {
 			position: fixed;
 			top: 0px;
 			height: 100vh;
+			opacity: 0;
+			transition: opacity 0.5s ease-in-out;
+		}
+
+		#hotspotMobileText3 > .overlay-text {
+			margin-left: 35%;
+		}
+
+		#hotspotMobileText1 > .overlay-text {
+			margin-left: 35%;
 		}
 	}
 

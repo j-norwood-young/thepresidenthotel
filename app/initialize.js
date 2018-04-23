@@ -139,13 +139,13 @@ $(function() {
 				$(`.overlay-text`).removeClass("is-fixed");
 				$(`.overlay-text-container`).removeClass("show-text-overlay");
 				$(`.overlay`).removeClass("show-overlay");
-				return;
+				// return;
 				if (direction === "down") {
-					$(`#hotspotMobileText${ step + 1 } > .overlay-text`).addClass("is-fixed");
+					// $(`#hotspotMobileText${ step + 1 } > .overlay-text`).addClass("is-fixed");
 					$(`#hotspotMobileText${ step + 1 }`).addClass("show-text-overlay");
 					$(`#hotspotMobileOverlay${ step + 1 }`).addClass("show-overlay");
 				} else {
-					$(`#hotspotMobileText${ step } > .overlay-text`).addClass("is-fixed");
+					// $(`#hotspotMobileText${ step } > .overlay-text`).addClass("is-fixed");
 					$(`#hotspotMobileText${ step }`).addClass("show-text-overlay");
 					$(`#hotspotMobileOverlay${ step }`).addClass("show-overlay");
 				}
@@ -155,56 +155,91 @@ $(function() {
 		});
 	});
 
-	// var topMobileWaypoint = new Waypoint({
-	// 	element: document.getElementById("presidentMobileContainer"),
-	// 	handler: direction => {
-	// 		if (direction === "down") {
-	// 			$("#presidentMobileBackground").addClass("is-fixed");
-	// 		} else {
-	// 			$("#presidentMobileBackground").removeClass("is-fixed");
-	// 		}
-	// 	},
-	// 	offset: "0%"
-	// });
+	var topMobileWaypoint = new Waypoint({
+		element: document.getElementById("presidentMobileContainer"),
+		handler: direction => {
+			// console.log("top", direction);
+			var top = $("#presidentMobileContainer")[0].offsetTop;
+			var bottom = $("#bottom")[0].offsetTop;
+			var scrollTop = window.pageYOffset;
+			var scrollBottom = scrollTop + $(window).height();
+			var height = $("#presidentMobileContainer")[0].clientHeight;
+			if ((scrollBottom >= top) && (scrollBottom <= bottom)) {
+				if (direction === "down") {
+					$("#presidentMobileBackground").addClass("is-fixed");
+					$("#presidentMobileBackground").css("top", 0);
+					$("#hotspotMobileOverlay1").css("top", 0);
+					$("#hotspotMobileOverlay1").css("position", "fixed");
+				} else {
+					$("#presidentMobileBackground").removeClass("is-fixed");
+					$("#presidentMobileBackground").css("top", "auto");
+					$("#hotspotMobileOverlay1").css("top", "auto");
+					$("#hotspotMobileOverlay1").css("position", "absolute");
+				}
+			}
+		},
+		offset: "0%"
+	});
 
-	// var bottomWaypoint = new Waypoint({
-	// 	element: document.getElementById("bottom"),
-	// 	handler: function(direction) {
-	// 		if (direction === "down") {
-	// 			$("#presidentMobileBackground").removeClass("is-fixed");
-	// 			$("#presidentMobileBackground").css("bottom", "0px");
-	// 		}
-	// 		$(`.overlay-text`).removeClass("is-fixed");
-	// 		$(`.overlay-text-container`).removeClass("show-text-overlay");
-	// 		$(`.overlay`).removeClass("show-overlay");
-	// 	},
-	// 	offset: "0%"
-	// });
+	var bottomWaypoint = new Waypoint({
+		element: document.getElementById("bottom"),
+		handler: function(direction) {
+			console.log("bottom", direction);
+			var top = $("#presidentMobileContainer")[0].offsetTop;
+			var bottom = $("#bottom")[0].offsetTop;
+			var scrollTop = window.pageYOffset;
+			var scrollBottom = scrollTop + $(window).height();
+			var height = $("#presidentMobileContainer")[0].clientHeight;
+			if (scrollTop < top)
+				return;
+			// console.log({bottom, scrollTop, scrollBottom});
+			if (direction === "down") {
+				$("#presidentMobileBackground").removeClass("is-fixed");
+				$("#presidentMobileBackground").css("top", scrollTop + bottom - scrollBottom);
+				$("#hotspotMobileOverlay3").css("top", scrollTop + bottom - scrollBottom);
+				$("#hotspotMobileOverlay3").css("position", "absolute");
+			} else {
+				$("#presidentMobileBackground").addClass("is-fixed");
+				$("#presidentMobileBackground").css("top", 0);
+				$("#hotspotMobileOverlay3").css("top", 0);
+				$("#hotspotMobileOverlay3").css("position", "fixed");
+			}
 
-	var stickMobile = function() {
-		var top = $("#presidentMobileContainer")[0].offsetTop;
-		var bottom = $("#bottom")[0].offsetTop;
-		var scrollTop = window.pageYOffset;
-		var scrollBottom = scrollTop + $(window).height();
-		var height = $("#presidentMobileContainer")[0].clientHeight;
-		console.log({bottom, scrollTop, scrollBottom});
-		if ((scrollTop >= top) && (bottom > scrollBottom)) {
-			// $("#presidentMobileBackground").addClass("is-fixed");
-			$("#presidentMobileBackground").css("top", scrollTop);
-		} else if (bottom < scrollBottom) {
-			$("#presidentMobileBackground").css("top", scrollTop + bottom - scrollBottom);
-		} else {
-			// $("#presidentMobileBackground").removeClass("is-fixed");
-		}
-	};
+			// $(`.overlay-text`).removeClass("is-fixed");
+			// $(`.overlay-text-container`).removeClass("show-text-overlay");
+			// $(`.overlay`).removeClass("show-overlay");
+		},
+		offset: "100%"
+	});
+
+	// var stickMobile = function() {
+	// 	var top = $("#presidentMobileContainer")[0].offsetTop;
+	// 	var bottom = $("#bottom")[0].offsetTop;
+	// 	var scrollTop = window.pageYOffset;
+	// 	var scrollBottom = scrollTop + $(window).height();
+	// 	var height = $("#presidentMobileContainer")[0].clientHeight;
+	// 	console.log({bottom, scrollTop, scrollBottom});
+	// 	if ((scrollTop >= top) && (bottom > scrollBottom)) {
+	// 		$("#presidentMobileBackground").addClass("is-fixed");
+	// 		// $("#presidentMobileBackground").css("top", 0);
+	// 	} else if (bottom < scrollBottom) {
+	// 		$("#presidentMobileBackground").removeClass("is-fixed");
+	// 		$("#presidentMobileBackground").css("top", scrollTop + bottom - scrollBottom);
+	// 	} else {
+	// 		$("#presidentMobileBackground").removeClass("is-fixed");
+	// 	}
+	// };
 
 	var stickHeader = function() {
 		var stickyHeaderEl = $("#sponsorMobileContainer");
 		if (window.pageYOffset >= 40) {
-			stickyHeaderEl.addClass("presidentMobileContainer-fixed");
+			stickyHeaderEl.addClass("is-fixed");
 		} else {
-			stickyHeaderEl.removeClass("presidentMobileContainer-fixed");
+			stickyHeaderEl.removeClass("is-fixed");
 		}
 	};
-	window.onscroll = function() {stickHeader(); stickMobile();};
+	window.onscroll = function() {
+		stickHeader(); 
+		// stickMobile();
+	};
 });
