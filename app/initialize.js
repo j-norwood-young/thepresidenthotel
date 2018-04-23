@@ -164,14 +164,13 @@ $(function() {
 		offset: "90%"
 	});
 
-	var headerWaypoint = new Waypoint({
-		element: document.getElementById("sponsorMobileContainer"),
-		handler: function(direction) {
-			if (direction === "down") {
-				$("#sponsorMobileContainer").addClass("presidentMobileContainer-fixed");
-			} else {
-				$("#sponsorMobileContainer").removeClass("presidentMobileContainer-fixed");
-			}
+	var stickHeader = function() {
+		var stickyHeaderEl = $("#sponsorMobileContainer");
+		if (window.pageYOffset >= 40) {
+			stickyHeaderEl.addClass("presidentMobileContainer-fixed");
+		} else {
+			stickyHeaderEl.removeClass("presidentMobileContainer-fixed");
 		}
-	});
+	};
+	window.onscroll = function() {stickHeader()};
 });

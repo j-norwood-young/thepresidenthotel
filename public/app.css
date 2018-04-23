@@ -213,11 +213,11 @@ footer p {
 /* line 214, app/css/main.less */
 #presidentMobileContainer {
   background-image: url("images/mobile/PresidentHotelMainImageMobile.jpg");
-  background-attachment: fixed;
+  background-attachment: initial;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
-  height: 300vh;
+  background-size: cover;
+  height: 100vh;
   margin: 40px 0px 60px 0px;
 }
 /* line 223, app/css/main.less */
@@ -342,13 +342,17 @@ footer p {
   }
   /* line 345, app/css/main.less */
   #sponsorMobileContainer {
+    /*position: fixed;*/
+    top: 0px;
+    left: 0px;
+    width: 100vw;
     background-image: url("images/mobile/MobileHeader2.jpg");
     height: 38px;
     text-align: center;
     padding-top: 8px;
     box-shadow: 0px 0px 3px 3px rgba(50, 50, 50, 0.3);
   }
-  /* line 351, app/css/main.less */
+  /* line 355, app/css/main.less */
   #sponsorMobileContainer img {
     height: 30px;
   }
