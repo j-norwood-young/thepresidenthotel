@@ -296,15 +296,23 @@ footer p {
     margin: 0px 60px;
   }
   /* line 301, app/css/main.less */
+  #header {
+    position: absolute;
+  }
+  /* line 304, app/css/main.less */
+  #header #header-container img {
+    max-height: 26px;
+  }
+  /* line 308, app/css/main.less */
   #video {
     height: auto;
   }
-  /* line 305, app/css/main.less */
+  /* line 312, app/css/main.less */
   .headline {
     font-size: 40pt;
     margin: 20px auto 46px auto;
   }
-  /* line 310, app/css/main.less */
+  /* line 317, app/css/main.less */
   .parallax {
     height: 358px;
     width: 100%;
@@ -317,13 +325,31 @@ footer p {
     background-size: 759px;
     background-position-y: 44px;
   }
-  /* line 323, app/css/main.less */
+  /* line 330, app/css/main.less */
   #topimg {
     margin-bottom: 50px;
   }
-  /* line 327, app/css/main.less */
+  /* line 334, app/css/main.less */
   #presidentMobileContainer {
     margin-top: 0px;
+  }
+  /* line 338, app/css/main.less */
+  .presidentMobileContainer-fixed {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+  }
+  /* line 345, app/css/main.less */
+  #sponsorMobileContainer {
+    background-image: url("images/mobile/MobileHeader.jpg");
+    height: 41px;
+    text-align: center;
+    padding-top: 5px;
+  }
+  /* line 350, app/css/main.less */
+  #sponsorMobileContainer img {
+    height: 30px;
   }
   /*.parallax, #topimg, #bottomimg {
 		height: 70vh;

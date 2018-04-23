@@ -163,4 +163,15 @@ $(function() {
 		},
 		offset: "90%"
 	});
+
+	var headerWaypoint = new Waypoint({
+		element: document.getElementById("sponsorMobileContainer"),
+		handler: function(direction) {
+			if (direction === "down") {
+				$("#sponsorMobileContainer").addClass("presidentMobileContainer-fixed");
+			} else {
+				$("#sponsorMobileContainer").removeClass("presidentMobileContainer-fixed");
+			}
+		}
+	});
 });
