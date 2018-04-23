@@ -189,12 +189,12 @@ $(function() {
 		var height = $("#presidentMobileContainer")[0].clientHeight;
 		console.log({bottom, scrollTop, scrollBottom});
 		if ((scrollTop >= top) && (bottom > scrollBottom)) {
-			$("#presidentMobileBackground").addClass("is-fixed");
-			$("#presidentMobileBackground").css("margin-top", 0);
+			// $("#presidentMobileBackground").addClass("is-fixed");
+			$("#presidentMobileBackground").css("top", scrollTop);
 		} else if (bottom < scrollBottom) {
-			$("#presidentMobileBackground").css("margin-top", bottom - scrollBottom);
+			$("#presidentMobileBackground").css("top", scrollTop + bottom - scrollBottom);
 		} else {
-			$("#presidentMobileBackground").removeClass("is-fixed");
+			// $("#presidentMobileBackground").removeClass("is-fixed");
 		}
 	};
 
