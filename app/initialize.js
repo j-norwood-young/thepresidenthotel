@@ -1,7 +1,3 @@
-var _ = require('lodash');
-// var $ = require('jquery');
-// var jQuery = $;
-// require("jquery-hotspot");
 require('waypoints/lib/noframework.waypoints.min');
 
 $(function() {

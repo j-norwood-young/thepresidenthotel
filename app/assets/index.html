@@ -3,27 +3,37 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Drought-proofing The President :: Beatnik</title>
-	<link rel="stylesheet" href="app.css">
-	<script src="app.js"></script>
+	<link rel="stylesheet" href="./app.css">
+	<script src="./app.js"></script>
 	<script>require('initialize');</script>
-	<link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Dosis:300|Permanent+Marker|Playfair+Display|Rock+Salt|Alfa+Slab+One|Bevan|Rufina|Suranna|Montserrat|Anton|Roboto|Tajawal|Tajawal:700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Anton|Roboto|Tajawal" rel="stylesheet">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-10686674-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-10686674-1');
+</script>
+
 </head>
 <body>
 	<div class="container">
 		<div id="header">
 			<div id="header-container">
-				<img src="images/dmlogo.png" alt="Daily Maverick" id="dmlogo" class="show-desktop">
-				<img src="images/mobile/DMLogoMobile.jpg" alt="Daily Maverick" id="dmmobilelogo" class="show-mobile">
-				<img src="images/beatnik.png" alt="Beatnik" id="beatniklogo" class="show-mobile">
+				<a href="https://www.dailymaverick.co.za/" class="show-desktop"><img src="./images/dmlogo.png" alt="Daily Maverick" id="dmlogo" ></a>
+				<a href="https://www.dailymaverick.co.za/" class="show-mobile"><img src="./images/mobile/DMLogoMobile.jpg" alt="Daily Maverick" id="dmmobilelogo" ></a>
+				<a href="https://www.beatnik.agency/" class="show-mobile"><img src="./images/beatnik.png" alt="Beatnik" id="beatniklogo"></a>
 				<div class="hide-mobile">
-					<div id="sponsorLogoContainer"><span id="paidFor">Paid for by </span><img src="images/ThePresidentHotel-blue.png" alt="Paid for by The President Hotel" id="sponsorlogo"></div>
+					<div id="sponsorLogoContainer"><span id="paidFor">Paid for by </span><img src="./images/ThePresidentHotel-blue.png" alt="Paid for by The President Hotel" id="sponsorlogo"></div>
 				</div>
-				<img src="images/beatnik.png" alt="Beatnik" id="beatniklogo" class="show-desktop">
+				<a href="https://www.beatnik.agency/" class="show-desktop"><img src="./images/beatnik.png" alt="Beatnik" id="beatniklogo" ></a>
 			</div>
 			<div id="sponsorMobileContainer" class="show-mobile">
-				<div id="sponsorLogoContainer"><span id="paidFor">Paid for by </span><img src="images/ThePresidentHotel-blue.png" alt="Paid for by The President Hotel" id="sponsorlogo"></div>
+				<div id="sponsorLogoContainer"><span id="paidFor">Paid for by </span><img src="./images/ThePresidentHotel-blue.png" alt="Paid for by The President Hotel" id="sponsorlogo"></div>
 			</div>
 		</div>
 		<div id="social">
@@ -33,7 +43,7 @@
 			<a href="#"><i class="fa fa-mail"></i></a>
 		</div>
 		<div id="topimg" class="parallax">
-			<!-- <img src="images/HeaderImage.jpg" alt="Splashing water"> -->
+			<!-- <img src="./images/HeaderImage.jpg" alt="Splashing water"> -->
 		</div>
 		<h1 class="headline">Drought-proofing The President</h1>
 		<div class="body-text">
@@ -60,17 +70,17 @@
 			<p style="margin-top:40px" class="hide-mobile"><em>Scroll across the images below to see what water saving interventions The President Hotel has put into place:</em></p>
 		</div>
 		<div id="presidentContainer" class="full-width hide-mobile">
-			<img src="images/PresidentHotelV2Overlay1.png" alt="Hotspot Overlay" id="hotspotOverlay1" class="overlay">
-			<img src="images/PresidentHotelV2Overlay2.png" alt="Hotspot Overlay" id="hotspotOverlay2" class="overlay">
-			<img src="images/PresidentHotelV2Overlay3.png" alt="Hotspot Overlay" id="hotspotOverlay3" class="overlay">
-			<img src="images/PresidentHotelMainImageV2.jpg" alt="The President" id="presidentMainPic">
+			<img src="./images/PresidentHotelV2Overlay1.png" alt="Hotspot Overlay" id="hotspotOverlay1" class="overlay">
+			<img src="./images/PresidentHotelV2Overlay2.png" alt="Hotspot Overlay" id="hotspotOverlay2" class="overlay">
+			<img src="./images/PresidentHotelV2Overlay3.png" alt="Hotspot Overlay" id="hotspotOverlay3" class="overlay">
+			<img src="./images/PresidentHotelMainImageV2.jpg" alt="The President" id="presidentMainPic">
 		</div>
 		<div id="presidentMobileBackground"></div>
 		<div id="presidentMobileContainer" class="full-width show-mobile">
 			<div id="trigger1" class="trigger" data-step="0"></div>
 			
 			<div id="hotspotMobileText1" class="overlay-text-container">
-				<img src="images/mobile/PresidentHotelMobileOverlay1.png" alt="Hotspot Overlay" id="hotspotMobileOverlay1" class="overlay">
+				<img src="./images/mobile/PresidentHotelMobileOverlay1.png" alt="Hotspot Overlay" id="hotspotMobileOverlay1" class="overlay">
 				<div class="overlay-text">
 					<ul>
 						<li>Bath plugs have been removed from all rooms.</li>
@@ -81,7 +91,7 @@
 			</div>
 			<div id="trigger2" class="trigger" data-step="1"></div>
 			<div id="hotspotMobileText2" class="overlay-text-container">
-				<img src="images/mobile/PresidentHotelMobileOverlay2.png" alt="Hotspot Overlay" id="hotspotMobileOverlay2" class="overlay">
+				<img src="./images/mobile/PresidentHotelMobileOverlay2.png" alt="Hotspot Overlay" id="hotspotMobileOverlay2" class="overlay">
 				<div class="overlay-text">
 					<ul>
 						<li>The overall water pressure of the hotel has been reduced by 35%.</li>
@@ -94,7 +104,7 @@
 			</div>
 			<div id="trigger3" class="trigger" data-step="2"></div>
 			<div id="hotspotMobileText3" class="overlay-text-container">
-				<img src="images/mobile/PresidentHotelMobileOverlay3.png" alt="Hotspot Overlay" id="hotspotMobileOverlay3" class="overlay">
+				<img src="./images/mobile/PresidentHotelMobileOverlay3.png" alt="Hotspot Overlay" id="hotspotMobileOverlay3" class="overlay">
 				<div class="overlay-text">
 					<ul>
 						<li>Waterless chemicals are used to clean all floors.</li>
@@ -129,10 +139,11 @@
 			<p>“I think there is a silver lining in having to deal with each of these challenges and the ultimate benefit of this drought will be that Capetonians have and will become even more water savvy.”</p>		
 		</div>
 		<div class="full-width">
-			<a href="https://presidenthotel.co.za"><img src="images/PresidentHotelAd.jpg" alt="President Hotel" id="PresidentHotelAd"></a>
+			<a href="https://presidenthotel.co.za"><img src="./images/PresidentHotelAd.jpg" alt="President Hotel" id="PresidentHotelAd"></a>
 		</div>
 	</div>
 	<footer>
-		<p>This page was paid for and produced by <a href="https://presidenthotel.co.za">President Hotel</a>.</p>
+		<p>This page was paid for and produced by <a href="https://presidenthotel.co.za">President Hotel</a>.<br>
+		The editorial staff of the Daily Maverick were not involved in the content production of this advertorial.</p>
 	</footer>
 </body>
