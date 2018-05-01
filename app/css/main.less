@@ -51,17 +51,23 @@ ul {
 		margin-top: 6px;
 	}
 
+	#beatniklogo {
+		height: 30px;
+		margin-top: 5px;
+	}
+
 	#sponsorLogoContainer {
 		font-weight: bold;
 		font-family: sans-serif;
 		text-transform: uppercase;
 		font-size: 8pt;
 		display: inline-block;
+		margin-left: -90px;
 		img {
 			vertical-align: middle;
 		}
 		#paidFor {
-			margin-right: 15px;
+			margin-right: 3px;
 			display: inline-block;
 			vertical-align: middle;
 		}
@@ -69,7 +75,7 @@ ul {
 }
 
 .parallax {
-	height: 90vh;
+	height: 50vh;
 	width: 100%;
 	margin-bottom: 50px;
 	overflow: hidden;
@@ -129,10 +135,18 @@ ul {
 }
 
 .headline, .pull-quote {
-	font-family: 'Anton', serif;
 	font-weight: 300;
 	text-transform: uppercase;
 	line-height: 100%;
+}
+
+.pull-quote {
+	font-family: 'Abril Fatface', serif;
+}
+
+.headline {
+	font-family: 'Abril Fatface', serif;
+	font-weight: 100;
 }
 
 .blurb {
@@ -154,8 +168,9 @@ ul {
 
 .pull-quote-right {
 	float: right;
-    margin-right: -80px;
-    margin-left: 20px;
+	margin-right: -5px;
+	margin-left: 50px;
+	margin-top: 10px;
 }
 
 .pull-quote-left {
@@ -195,7 +210,32 @@ footer {
 	.hotspot {
 		position: absolute;
 		opacity: 0.8;
-		border: 5px #bfecfd solid;
+		/*border: 5px #bfecfd solid;*/
+		z-index: 99;
+		transition: opacity 0.5s ease-in-out;
+	}
+
+
+}
+
+#presidentMobileContainer {
+	width: 100vw;
+	margin-bottom: 76px;
+	.overlay {
+		position: absolute;
+		opacity: 0;
+		transition: opacity 0.5s ease-in-out;
+	}
+
+	.show-overlay {
+		opacity: 1;
+		
+	}
+
+	.hotspot {
+		position: absolute;
+		opacity: 0.8;
+		/*border: 5px #bfecfd solid;*/
 		z-index: 99;
 		transition: opacity 0.5s ease-in-out;
 	}
@@ -228,10 +268,11 @@ footer {
 
 // Tablet
 @media screen and (max-width: 736px) {
+
 	.pull-quote-right, .pull-quote-left {
 		float: none;
 		width: 100%;
-		margin: 20px 0px;
+		margin: 40px 0px;
 		clear: both;
 		text-align: center;
 	}
@@ -256,25 +297,42 @@ footer {
 		display: none;
 	}
 
-	#sponsorLogoContainer img {
-		max-height: 30px;
+	#sponsorMobileContainer {
+		top: 0px;
+		left: 0px;
+		width: 100vw;
+		background-image: url("./images/mobile/MobileHeader3.jpg");
+		height: 38px;
+		text-align: center;
+		padding-top: 8px;
+		box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.2);
+		img {
+			height: 30px;
+		}
+	}
+
+	#header {
+		position: absolute;
+	}
+
+	#header #header-container img {
+	    max-height: 26px;
+	}
+
+	#dmmobilelogo {
+		margin-top: 5px;
+	}
+
+	#PresidentHotelAd {
+		margin-top: 40px;
 	}
 }
 
 // Mobile
 @media screen and (max-width: 480px) {
+
 	.body-text {
 		margin: 0px 60px;
-	}
-	
-	#header {
-		position: absolute;
-	}
-
-	
-
-	#header #header-container img {
-	    max-height: 26px;
 	}
 
 	#video {
@@ -284,24 +342,19 @@ footer {
 	.headline {
 		font-size: 40pt;
 		margin: 20px auto 46px auto;
+		max-width: 90%;
 	}
 
 	.parallax {
-	    height: 358px;
-	    width: 100%;
-	    margin-bottom: 50px;
-	    overflow: hidden;
-	    background-attachment: fixed;
-	    background-image: url("./images/top.jpg");
+	    height: 50vh;
+	    background-attachment: scroll;
 	    background-position: center;
 	    background-repeat: no-repeat;
-	    background-size: 759px;
-	    background-position-y: 44px;
+	    margin-top: 40px;
 	}
 
 	#topimg {
-		margin-bottom: 50px;
-		margin-top: -10px;
+		background-image: url("./images/HotelMobile/DryOliveMobile.jpg");
 	}
 	
 	#presidentMobileBackground {
@@ -323,56 +376,6 @@ footer {
 		top: 15px;
 	}
 
-	#presidentMobileContainer {
-		margin: 20px 0px 120px 0px;
-
-		
-
-		.overlay-text-container {
-			opacity: 1;
-			transition: opacity 0.5s ease-in-out;
-			height: 75vh;
-
-
-		}
-
-		.overlay-text {
-			color: white;
-			background-color: rgba(40,40,40,0.7);
-			position: absolute;
-			width: 65%;
-			margin-left: 5%;
-			margin-top: 50px;
-			border: 1px rgba(180,180,180,0.4) solid;
-			ul {
-				padding: 10px 40px 0px 40px;
-			}
-		}
-
-		.show-text-overlay, .show-overlay {
-			opacity: 1;
-			.overlay {
-				opacity: 1;
-			}
-		}
-
-		.overlay {
-			position: fixed;
-			top: 0px;
-			height: 100vh;
-			opacity: 0;
-			transition: opacity 0.5s ease-in-out;
-		}
-
-		#hotspotMobileText3 > .overlay-text {
-			margin-left: 35%;
-		}
-
-		#hotspotMobileText1 > .overlay-text {
-			margin-left: 35%;
-		}
-	}
-
 	.is-fixed {
 		position: fixed;
 		top: 0px;
@@ -380,25 +383,13 @@ footer {
 		width: 100vw;
 	}
 
-	#sponsorMobileContainer {
-		/*position: fixed;*/
-		top: 0px;
-		left: 0px;
-		width: 100vw;
-		background-image: url("./images/mobile/MobileHeader2.jpg");
-		height: 38px;
-		text-align: center;
-		padding-top: 8px;
-		box-shadow: 0px 0px 3px 3px rgba(50,50,50,0.3);
-		img {
-			height: 30px;
-		}
+	#topimg {
+		margin-top: 40px;
+		background-position: cover;
 	}
 
-	/*.parallax, #topimg, #bottomimg {
-		height: 70vh;
-		background-size: 100%;
-		background-color: #0e0e0e;
-	}*/
+	#header #sponsorLogoContainer {
+		margin-left: -45px;
+	}
 
 }

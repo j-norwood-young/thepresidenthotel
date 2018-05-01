@@ -12,6 +12,7 @@
   "dependencies": {
     "jquery": "^3.3.1",
     "jquery-hotspot": "^1.0.2",
+    "npm": "^6.0.0",
     "waypoints": "^4.0.1"
   },
   "devDependencies": {
