@@ -1,1 +1,395 @@
-body{background-color:#fff;margin:0}.container{width:100vw;padding-top:60px;overflow-x:hidden}p,ul{font-family:Tajawal,sans-serif;font-size:14pt}ul{line-height:120%;font-size:12pt}ul li{margin-bottom:20px}#header{width:100%;box-shadow:0 2px 3px 0 rgba(40,40,40,.1);position:fixed;top:0;left:0;background-color:#f7f7f7;z-index:100}#header #header-container{margin:0 auto;padding:10px 20px;display:flex;flex-wrap:wrap;justify-content:space-between}#header #header-container img{max-height:40px}#header #dmlogo{height:27px;margin-top:6px}#header #beatniklogo{height:30px;margin-top:5px}#header #sponsorLogoContainer{font-weight:700;font-family:sans-serif;text-transform:uppercase;font-size:8pt;display:inline-block;margin-left:-90px}#header #sponsorLogoContainer img{vertical-align:middle}#header #sponsorLogoContainer #paidFor{margin-right:3px;display:inline-block;vertical-align:middle}.parallax{height:50vh;width:100%;margin-bottom:50px;overflow:hidden;background-attachment:scroll;background-image:url(images/top.jpg);background-position:center;background-repeat:no-repeat;background-size:cover}#topimg{background-image:url(images/MainHeaderImage.jpg);margin-bottom:70px}#bottomimg{background-image:url(images/defoe.jpg);height:100vh}#video{width:100%;height:auto}.body-text{max-width:600px;margin:0 auto}.body-text img{max-width:100%}.full-width img{width:100vw}.drop-cap{font-family:'Playfair Display',serif;float:left;line-height:46px;font-size:50px;margin-top:-5px;margin-right:3px;margin-left:-8px}.headline{font-size:60pt;text-align:center;margin:20px auto 85px auto;font-weight:600;line-height:55pt;max-width:800px}.headline,.pull-quote{font-weight:300;text-transform:uppercase;line-height:100%}.pull-quote{font-family:'Abril Fatface',serif}.headline{font-family:'Abril Fatface',serif;font-weight:100}.blurb{font-weight:700;font-family:Tajawal,sans-serif;margin-bottom:40px;line-height:112%;font-size:17pt}.pull-quote{width:200px;font-size:23px;line-height:32px;text-align:center;margin-bottom:20px}.pull-quote-right{float:right;margin-right:-5px;margin-left:50px;margin-top:10px}.pull-quote-left{float:left;margin-left:-80px;margin-right:20px}footer{margin:20px;text-align:center}footer p{font-size:10pt}#presidentContainer{width:100vw;margin-bottom:76px}#presidentContainer .overlay{position:absolute;opacity:0;transition:opacity .5s ease-in-out}#presidentContainer .show-overlay{opacity:1}#presidentContainer .hotspot{position:absolute;opacity:.8;z-index:99;transition:opacity .5s ease-in-out}#presidentMobileContainer{width:100vw;margin-bottom:76px}#presidentMobileContainer .overlay{position:absolute;opacity:0;transition:opacity .5s ease-in-out}#presidentMobileContainer .show-overlay{opacity:1}#presidentMobileContainer .hotspot{position:absolute;opacity:.8;z-index:99;transition:opacity .5s ease-in-out}#PresidentHotelAd{margin-top:70px}.is-fixed{position:fixed!important;top:25%}@media screen and (min-width:737px){.show-mobile{display:none}.hide-desktop{display:none}}@media screen and (max-width:736px){.pull-quote-left,.pull-quote-right{float:none;width:100%;margin:40px 0;clear:both;text-align:center}.body-text{margin:0 100px;max-width:none;display:block}#bottomimg{background-size:100%;background-position-y:50px}.hide-mobile{display:none}.show-desktop{display:none}#sponsorMobileContainer{top:0;left:0;width:100vw;background-image:url(images/mobile/MobileHeader3.jpg);height:38px;text-align:center;padding-top:8px;box-shadow:0 3px 4px 0 rgba(50,50,50,.2)}#sponsorMobileContainer img{height:30px}#header{position:absolute}#header #header-container img{max-height:26px}#dmmobilelogo{margin-top:5px}#PresidentHotelAd{margin-top:40px}}@media screen and (max-width:480px){.body-text{margin:0 60px}#video{height:auto}.headline{font-size:40pt;margin:20px auto 46px auto;max-width:90%}.parallax{height:50vh;background-attachment:scroll;background-position:center;background-repeat:no-repeat;margin-top:40px}#topimg{background-image:url(images/HotelMobile/DryOliveMobile.jpg)}#presidentMobileBackground{background-image:url(images/mobile/PresidentHotelMainImageMobile.jpg);background-attachment:initial;background-position:center;background-repeat:no-repeat;background-size:cover;height:100vh;width:100vw;position:absolute}.sticky{position:-webkit-sticky;position:-moz-sticky;position:-ms-sticky;position:-o-sticky;top:15px}.is-fixed{position:fixed;top:0;left:0;width:100vw}#topimg{margin-top:40px;background-position:cover}#header #sponsorLogoContainer{margin-left:-45px}}.brunch{font-family:-apple-system,Sans-Serif;text-align:center;font-size:24pt;color:#3f894a}
+/* line 1, app/css/main.less */
+body {
+  background-color: white;
+  margin: 0px;
+}
+/* line 6, app/css/main.less */
+.container {
+  width: 100vw;
+  padding-top: 60px;
+  overflow-x: hidden;
+}
+/* line 12, app/css/main.less */
+p,
+ul {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 14pt;
+}
+/* line 17, app/css/main.less */
+ul {
+  line-height: 120%;
+  font-size: 12pt;
+}
+/* line 21, app/css/main.less */
+ul li {
+  margin-bottom: 20px;
+}
+/* line 26, app/css/main.less */
+#header {
+  width: 100%;
+  box-shadow: 0px 2px 3px 0px rgba(40, 40, 40, 0.1);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: #f7f7f7;
+  z-index: 100;
+}
+/* line 36, app/css/main.less */
+#header #header-container {
+  /*max-width: 1024px;*/
+  margin: 0px auto;
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/* line 44, app/css/main.less */
+#header #header-container img {
+  max-height: 40px;
+}
+/* line 49, app/css/main.less */
+#header #dmlogo {
+  height: 27px;
+  margin-top: 6px;
+}
+/* line 54, app/css/main.less */
+#header #beatniklogo {
+  height: 30px;
+  margin-top: 5px;
+}
+/* line 59, app/css/main.less */
+#header #sponsorLogoContainer {
+  font-weight: bold;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 8pt;
+  display: inline-block;
+  margin-left: -90px;
+}
+/* line 66, app/css/main.less */
+#header #sponsorLogoContainer img {
+  vertical-align: middle;
+}
+/* line 69, app/css/main.less */
+#header #sponsorLogoContainer #paidFor {
+  margin-right: 3px;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 77, app/css/main.less */
+.parallax {
+  height: 50vh;
+  width: 100%;
+  margin-bottom: 50px;
+  overflow: hidden;
+  background-attachment: scroll;
+  background-image: url("images/top.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* line 88, app/css/main.less */
+#topimg {
+  background-image: url("images/MainHeaderImage.jpg");
+  margin-bottom: 70px;
+}
+/* line 93, app/css/main.less */
+#bottomimg {
+  background-image: url("images/defoe.jpg");
+  height: 100vh;
+}
+/* line 98, app/css/main.less */
+#video {
+  width: 100%;
+  height: auto;
+}
+/* line 103, app/css/main.less */
+.body-text {
+  max-width: 600px;
+  margin: 0px auto;
+}
+/* line 107, app/css/main.less */
+.body-text img {
+  max-width: 100%;
+}
+/* line 113, app/css/main.less */
+.full-width img {
+  width: 100vw;
+}
+/* line 118, app/css/main.less */
+.drop-cap {
+  font-family: 'Playfair Display', serif;
+  float: left;
+  line-height: 46px;
+  font-size: 50px;
+  margin-top: -5px;
+  margin-right: 3px;
+  margin-left: -8px;
+}
+/* line 128, app/css/main.less */
+.headline {
+  font-size: 60pt;
+  text-align: center;
+  margin: 20px auto 85px auto;
+  font-weight: 600;
+  line-height: 55pt;
+  max-width: 800px;
+}
+/* line 137, app/css/main.less */
+.headline,
+.pull-quote {
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 100%;
+}
+/* line 143, app/css/main.less */
+.pull-quote {
+  font-family: 'Abril Fatface', serif;
+}
+/* line 147, app/css/main.less */
+.headline {
+  font-family: 'Abril Fatface', serif;
+  font-weight: 100;
+}
+/* line 152, app/css/main.less */
+.blurb {
+  font-weight: 700;
+  font-family: 'Tajawal', sans-serif;
+  margin-bottom: 40px;
+  line-height: 112%;
+  font-size: 17pt;
+}
+/* line 161, app/css/main.less */
+.pull-quote {
+  width: 200px;
+  font-size: 23px;
+  line-height: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* line 169, app/css/main.less */
+.pull-quote-right {
+  float: right;
+  margin-right: -5px;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+/* line 176, app/css/main.less */
+.pull-quote-left {
+  float: left;
+  margin-left: -80px;
+  margin-right: 20px;
+}
+/* line 182, app/css/main.less */
+footer {
+  margin: 20px;
+  text-align: center;
+}
+/* line 183, app/css/main.less */
+footer p {
+  font-size: 10pt;
+}
+/* line 191, app/css/main.less */
+#topimg {
+  /*margin-left: -100vw;*/
+  /*background-color: #000;*/
+}
+/* line 196, app/css/main.less */
+#presidentContainer {
+  width: 100vw;
+  margin-bottom: 76px;
+}
+/* line 199, app/css/main.less */
+#presidentContainer .overlay {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+/* line 205, app/css/main.less */
+#presidentContainer .show-overlay {
+  opacity: 1;
+}
+/* line 210, app/css/main.less */
+#presidentContainer .hotspot {
+  position: absolute;
+  opacity: 0.8;
+  /*border: 5px #bfecfd solid;*/
+  z-index: 99;
+  transition: opacity 0.5s ease-in-out;
+}
+/* line 221, app/css/main.less */
+#presidentMobileContainer {
+  width: 100vw;
+  margin-bottom: 76px;
+}
+/* line 224, app/css/main.less */
+#presidentMobileContainer .overlay {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+/* line 230, app/css/main.less */
+#presidentMobileContainer .show-overlay {
+  opacity: 1;
+}
+/* line 235, app/css/main.less */
+#presidentMobileContainer .hotspot {
+  position: absolute;
+  opacity: 0.8;
+  /*border: 5px #bfecfd solid;*/
+  z-index: 99;
+  transition: opacity 0.5s ease-in-out;
+}
+/* line 246, app/css/main.less */
+#PresidentHotelAd {
+  margin-top: 70px;
+}
+/* line 250, app/css/main.less */
+.is-fixed {
+  position: fixed !important;
+  top: 25%;
+}
+@media screen and (min-width: 737px) {
+  /* line 260, app/css/main.less */
+  .show-mobile {
+    display: none;
+  }
+  /* line 264, app/css/main.less */
+  .hide-desktop {
+    display: none;
+  }
+}
+@media screen and (max-width: 736px) {
+  /* line 272, app/css/main.less */
+  .pull-quote-right,
+  .pull-quote-left {
+    float: none;
+    width: 100%;
+    margin: 40px 0px;
+    clear: both;
+    text-align: center;
+  }
+  /* line 280, app/css/main.less */
+  .body-text {
+    margin: 0px 100px;
+    max-width: none;
+    display: block;
+  }
+  /* line 287, app/css/main.less */
+  #bottomimg {
+    background-size: 100%;
+    background-position-y: 50px;
+  }
+  /* line 292, app/css/main.less */
+  .hide-mobile {
+    display: none;
+  }
+  /* line 296, app/css/main.less */
+  .show-desktop {
+    display: none;
+  }
+  /* line 300, app/css/main.less */
+  #sponsorMobileContainer {
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    background-image: url("images/mobile/MobileHeader3.jpg");
+    height: 38px;
+    text-align: center;
+    padding-top: 8px;
+    box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.2);
+  }
+  /* line 309, app/css/main.less */
+  #sponsorMobileContainer img {
+    height: 30px;
+  }
+  /* line 314, app/css/main.less */
+  #header {
+    position: absolute;
+  }
+  /* line 318, app/css/main.less */
+  #header #header-container img {
+    max-height: 26px;
+  }
+  /* line 322, app/css/main.less */
+  #dmmobilelogo {
+    margin-top: 5px;
+  }
+  /* line 326, app/css/main.less */
+  #PresidentHotelAd {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 334, app/css/main.less */
+  .body-text {
+    margin: 0px 60px;
+  }
+  /* line 338, app/css/main.less */
+  #video {
+    height: auto;
+  }
+  /* line 342, app/css/main.less */
+  .headline {
+    font-size: 40pt;
+    margin: 20px auto 46px auto;
+    max-width: 90%;
+  }
+  /* line 348, app/css/main.less */
+  .parallax {
+    height: 50vh;
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 40px;
+  }
+  /* line 356, app/css/main.less */
+  #topimg {
+    background-image: url("images/HotelMobile/DryOliveMobile.jpg");
+  }
+  /* line 360, app/css/main.less */
+  #presidentMobileBackground {
+    background-image: url("images/mobile/PresidentHotelMainImageMobile.jpg");
+    background-attachment: initial;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+  }
+  /* line 371, app/css/main.less */
+  .sticky {
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    top: 15px;
+  }
+  /* line 379, app/css/main.less */
+  .is-fixed {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+  }
+  /* line 386, app/css/main.less */
+  #topimg {
+    margin-top: 40px;
+    background-position: cover;
+  }
+  /* line 391, app/css/main.less */
+  #header #sponsorLogoContainer {
+    margin-left: -45px;
+  }
+}
+
+.brunch {
+  font-family: -apple-system, Sans-Serif;
+  text-align: center;
+  font-size: 24pt;
+  color: #3f894a;
+}
+
+
+/*# sourceMappingURL=app.css.map*/

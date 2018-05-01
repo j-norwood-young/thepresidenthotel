@@ -3,12 +3,21 @@ require('waypoints/lib/noframework.waypoints.min');
 $(function() {
 	var hotspots = [
 	{
-		top: 90,
-		left: 1060,
-		width: 270,
-		height: 270,
+		top: 40,
+		left: 790,
+		width: 200,
+		height: 200,
 		css: {},
 		element: "#hotspotOverlay1",
+		container: "#presidentContainer",
+	},
+	{
+		top: 90,
+		left: 1070,
+		width: 260,
+		height: 260,
+		css: {},
+		element: "#hotspotOverlay2",
 		container: "#presidentContainer",
 	},
 	{
@@ -17,7 +26,7 @@ $(function() {
 		width: 200,
 		height: 200,
 		css: {},
-		element: "#hotspotOverlay2",
+		element: "#hotspotOverlay3",
 		container: "#presidentContainer",
 	},
 	{
@@ -26,12 +35,21 @@ $(function() {
 		width: 330,
 		height: 330,
 		css: {},
-		element: "#hotspotOverlay3",
+		element: "#hotspotOverlay4",
 		container: "#presidentContainer",
 	},
 	{
-		top: 60,
-		left: 380,
+		top: 570,
+		left: 940,
+		width: 200,
+		height: 200,
+		css: {},
+		element: "#hotspotOverlay5",
+		container: "#presidentContainer",
+	},
+	{
+		top: 25,
+		left: 190,
 		width: 120,
 		height: 120,
 		css: {},
@@ -39,12 +57,23 @@ $(function() {
 		container: "#presidentMobileContainer",
 	},
 	{
-		top: 240,
-		left: 145,
+		top: 60,
+		left: 380,
 		width: 120,
 		height: 120,
 		css: {},
 		element: "#hotspotMobileOverlay2",
+		container: "#presidentMobileContainer",
+	},
+	{
+		top: 250,
+		left: 145,
+		// top: 310,
+		// left: 0,
+		width: 120,
+		height: 120,
+		css: {},
+		element: "#hotspotMobileOverlay3",
 		container: "#presidentMobileContainer",
 	},
 	{
@@ -53,7 +82,16 @@ $(function() {
 		width: 140,
 		height: 140,
 		css: {},
-		element: "#hotspotMobileOverlay3",
+		element: "#hotspotMobileOverlay4",
+		container: "#presidentMobileContainer",
+	},
+	{
+		top: 345,
+		left: 285,
+		width: 120,
+		height: 120,
+		css: {},
+		element: "#hotspotMobileOverlay5",
 		container: "#presidentMobileContainer",
 	},
 	];
@@ -72,19 +110,17 @@ $(function() {
 		hotspot.css["margin-top"] = hotspot.top * sizing;
 		hotspot.css.width = hotspot.width * sizing;
 		hotspot.css.height = hotspot.height * sizing;
-		var el = $("<div class='hotspot'></div>");
+		var el = $("<div class='hotspot' data-name='" + hotspot.element + "'></div>");
 		for (let i in hotspot.css) {
 			$(el).css(i, hotspot.css[i]);	
 		}
 		$(el).on("mouseover", e => {
 			$(".overlay").removeClass("show-overlay");
 			$(hotspot.element).addClass("show-overlay");
-			// $(".hotspot").css("opacity", 0);
 			$(e.target).css("opacity", 1);
 		});
 		$(el).on("mouseout", e => {
 			$(hotspot.element).removeClass("show-overlay");
-			// $(".hotspot").css("opacity", 0);
 		});
 		$(hotspot.container).prepend(el);
 	}
@@ -92,16 +128,9 @@ $(function() {
 	var setHotspots = function() {
 		$(".hotspot").remove();
 		hotspots.forEach(setHotspot);
-		// console.log("set hotspots");
 	};
 
 	setHotspots();
-	
-	// hotspots.forEach(hotspot => {
-	// 	setHotspot(hotspot);
-	// 	// console.log("Priming", hotspot.element);
-	// 	// $(hotspot.element).on("load", setHotspot(hotspot));	
-	// });
 	
 	$( window ).resize(function() {
 		setHotspots();
@@ -117,6 +146,5 @@ $(function() {
 	};
 	window.onscroll = function() {
 		stickHeader(); 
-		// stickMobile();
 	};
 });
