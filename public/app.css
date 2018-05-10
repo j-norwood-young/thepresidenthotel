@@ -34,7 +34,12 @@ ul li {
   background-color: #f7f7f7;
   z-index: 100;
 }
-/* line 36, app/css/main.less */
+/* line 35, app/css/main.less */
+#header a {
+  color: black;
+  font-size: 9pt;
+}
+/* line 40, app/css/main.less */
 #header #header-container {
   /*max-width: 1024px;*/
   margin: 0px auto;
@@ -43,21 +48,21 @@ ul li {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-/* line 44, app/css/main.less */
+/* line 48, app/css/main.less */
 #header #header-container img {
   max-height: 40px;
 }
-/* line 49, app/css/main.less */
+/* line 53, app/css/main.less */
 #header #dmlogo {
   height: 27px;
   margin-top: 6px;
 }
-/* line 54, app/css/main.less */
+/* line 58, app/css/main.less */
 #header #beatniklogo {
   height: 30px;
   margin-top: 5px;
 }
-/* line 59, app/css/main.less */
+/* line 63, app/css/main.less */
 #header #sponsorLogoContainer {
   font-weight: bold;
   font-family: sans-serif;
@@ -66,17 +71,17 @@ ul li {
   display: inline-block;
   margin-left: -90px;
 }
-/* line 66, app/css/main.less */
+/* line 70, app/css/main.less */
 #header #sponsorLogoContainer img {
   vertical-align: middle;
 }
-/* line 69, app/css/main.less */
+/* line 73, app/css/main.less */
 #header #sponsorLogoContainer #paidFor {
   margin-right: 3px;
   display: inline-block;
   vertical-align: middle;
 }
-/* line 77, app/css/main.less */
+/* line 81, app/css/main.less */
 .parallax {
   height: 50vh;
   width: 100%;
@@ -88,35 +93,35 @@ ul li {
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* line 88, app/css/main.less */
+/* line 92, app/css/main.less */
 #topimg {
   background-image: url("images/MainHeaderImage.jpg");
   margin-bottom: 70px;
 }
-/* line 93, app/css/main.less */
+/* line 97, app/css/main.less */
 #bottomimg {
   background-image: url("images/defoe.jpg");
   height: 100vh;
 }
-/* line 98, app/css/main.less */
+/* line 102, app/css/main.less */
 #video {
   width: 100%;
   height: auto;
 }
-/* line 103, app/css/main.less */
+/* line 107, app/css/main.less */
 .body-text {
   max-width: 600px;
   margin: 0px auto;
 }
-/* line 107, app/css/main.less */
+/* line 111, app/css/main.less */
 .body-text img {
   max-width: 100%;
 }
-/* line 113, app/css/main.less */
+/* line 117, app/css/main.less */
 .full-width img {
   width: 100vw;
 }
-/* line 118, app/css/main.less */
+/* line 122, app/css/main.less */
 .drop-cap {
   font-family: 'Playfair Display', serif;
   float: left;
@@ -126,7 +131,7 @@ ul li {
   margin-right: 3px;
   margin-left: -8px;
 }
-/* line 128, app/css/main.less */
+/* line 132, app/css/main.less */
 .headline {
   font-size: 60pt;
   text-align: center;
@@ -135,23 +140,23 @@ ul li {
   line-height: 55pt;
   max-width: 800px;
 }
-/* line 137, app/css/main.less */
+/* line 141, app/css/main.less */
 .headline,
 .pull-quote {
   font-weight: 300;
   text-transform: uppercase;
   line-height: 100%;
 }
-/* line 143, app/css/main.less */
+/* line 147, app/css/main.less */
 .pull-quote {
   font-family: 'Abril Fatface', serif;
 }
-/* line 147, app/css/main.less */
+/* line 151, app/css/main.less */
 .headline {
   font-family: 'Abril Fatface', serif;
   font-weight: 100;
 }
-/* line 152, app/css/main.less */
+/* line 156, app/css/main.less */
 .blurb {
   font-weight: 700;
   font-family: 'Tajawal', sans-serif;
@@ -159,7 +164,7 @@ ul li {
   line-height: 112%;
   font-size: 17pt;
 }
-/* line 161, app/css/main.less */
+/* line 165, app/css/main.less */
 .pull-quote {
   width: 200px;
   font-size: 23px;
@@ -167,49 +172,49 @@ ul li {
   text-align: center;
   margin-bottom: 20px;
 }
-/* line 169, app/css/main.less */
+/* line 173, app/css/main.less */
 .pull-quote-right {
   float: right;
   margin-right: -5px;
   margin-left: 50px;
   margin-top: 10px;
 }
-/* line 176, app/css/main.less */
+/* line 180, app/css/main.less */
 .pull-quote-left {
   float: left;
   margin-left: -80px;
   margin-right: 20px;
 }
-/* line 182, app/css/main.less */
+/* line 186, app/css/main.less */
 footer {
   margin: 20px;
   text-align: center;
 }
-/* line 183, app/css/main.less */
+/* line 187, app/css/main.less */
 footer p {
   font-size: 10pt;
 }
-/* line 191, app/css/main.less */
+/* line 195, app/css/main.less */
 #topimg {
   /*margin-left: -100vw;*/
   /*background-color: #000;*/
 }
-/* line 196, app/css/main.less */
+/* line 200, app/css/main.less */
 #presidentContainer {
   width: 100vw;
   margin-bottom: 76px;
 }
-/* line 199, app/css/main.less */
+/* line 203, app/css/main.less */
 #presidentContainer .overlay {
   position: absolute;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
-/* line 205, app/css/main.less */
+/* line 209, app/css/main.less */
 #presidentContainer .show-overlay {
   opacity: 1;
 }
-/* line 210, app/css/main.less */
+/* line 214, app/css/main.less */
 #presidentContainer .hotspot {
   position: absolute;
   opacity: 0.8;
@@ -217,22 +222,22 @@ footer p {
   z-index: 99;
   transition: opacity 0.5s ease-in-out;
 }
-/* line 221, app/css/main.less */
+/* line 225, app/css/main.less */
 #presidentMobileContainer {
   width: 100vw;
   margin-bottom: 76px;
 }
-/* line 224, app/css/main.less */
+/* line 228, app/css/main.less */
 #presidentMobileContainer .overlay {
   position: absolute;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
-/* line 230, app/css/main.less */
+/* line 234, app/css/main.less */
 #presidentMobileContainer .show-overlay {
   opacity: 1;
 }
-/* line 235, app/css/main.less */
+/* line 239, app/css/main.less */
 #presidentMobileContainer .hotspot {
   position: absolute;
   opacity: 0.8;
@@ -240,27 +245,27 @@ footer p {
   z-index: 99;
   transition: opacity 0.5s ease-in-out;
 }
-/* line 246, app/css/main.less */
+/* line 250, app/css/main.less */
 #PresidentHotelAd {
   margin-top: 70px;
 }
-/* line 250, app/css/main.less */
+/* line 254, app/css/main.less */
 .is-fixed {
   position: fixed !important;
   top: 25%;
 }
 @media screen and (min-width: 737px) {
-  /* line 260, app/css/main.less */
+  /* line 264, app/css/main.less */
   .show-mobile {
     display: none;
   }
-  /* line 264, app/css/main.less */
+  /* line 268, app/css/main.less */
   .hide-desktop {
     display: none;
   }
 }
 @media screen and (max-width: 736px) {
-  /* line 272, app/css/main.less */
+  /* line 276, app/css/main.less */
   .pull-quote-right,
   .pull-quote-left {
     float: none;
@@ -269,26 +274,26 @@ footer p {
     clear: both;
     text-align: center;
   }
-  /* line 280, app/css/main.less */
+  /* line 284, app/css/main.less */
   .body-text {
     margin: 0px 100px;
     max-width: none;
     display: block;
   }
-  /* line 287, app/css/main.less */
+  /* line 291, app/css/main.less */
   #bottomimg {
     background-size: 100%;
     background-position-y: 50px;
   }
-  /* line 292, app/css/main.less */
+  /* line 296, app/css/main.less */
   .hide-mobile {
     display: none;
   }
-  /* line 296, app/css/main.less */
+  /* line 300, app/css/main.less */
   .show-desktop {
     display: none;
   }
-  /* line 300, app/css/main.less */
+  /* line 304, app/css/main.less */
   #sponsorMobileContainer {
     top: 0px;
     left: 0px;
@@ -299,43 +304,43 @@ footer p {
     padding-top: 8px;
     box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.2);
   }
-  /* line 309, app/css/main.less */
+  /* line 313, app/css/main.less */
   #sponsorMobileContainer img {
     height: 30px;
   }
-  /* line 314, app/css/main.less */
+  /* line 318, app/css/main.less */
   #header {
     position: absolute;
   }
-  /* line 318, app/css/main.less */
+  /* line 322, app/css/main.less */
   #header #header-container img {
     max-height: 26px;
   }
-  /* line 322, app/css/main.less */
+  /* line 326, app/css/main.less */
   #dmmobilelogo {
     margin-top: 5px;
   }
-  /* line 326, app/css/main.less */
+  /* line 330, app/css/main.less */
   #PresidentHotelAd {
     margin-top: 40px;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 334, app/css/main.less */
+  /* line 338, app/css/main.less */
   .body-text {
     margin: 0px 60px;
   }
-  /* line 338, app/css/main.less */
+  /* line 342, app/css/main.less */
   #video {
     height: auto;
   }
-  /* line 342, app/css/main.less */
+  /* line 346, app/css/main.less */
   .headline {
     font-size: 40pt;
     margin: 20px auto 46px auto;
     max-width: 90%;
   }
-  /* line 348, app/css/main.less */
+  /* line 352, app/css/main.less */
   .parallax {
     height: 50vh;
     background-attachment: scroll;
@@ -343,11 +348,11 @@ footer p {
     background-repeat: no-repeat;
     margin-top: 40px;
   }
-  /* line 356, app/css/main.less */
+  /* line 360, app/css/main.less */
   #topimg {
     background-image: url("images/HotelMobile/DryOliveMobile.jpg");
   }
-  /* line 360, app/css/main.less */
+  /* line 364, app/css/main.less */
   #presidentMobileBackground {
     background-image: url("images/mobile/PresidentHotelMainImageMobile.jpg");
     background-attachment: initial;
@@ -358,7 +363,7 @@ footer p {
     width: 100vw;
     position: absolute;
   }
-  /* line 371, app/css/main.less */
+  /* line 375, app/css/main.less */
   .sticky {
     position: -webkit-sticky;
     position: -moz-sticky;
@@ -366,19 +371,19 @@ footer p {
     position: -o-sticky;
     top: 15px;
   }
-  /* line 379, app/css/main.less */
+  /* line 383, app/css/main.less */
   .is-fixed {
     position: fixed;
     top: 0px;
     left: 0px;
     width: 100vw;
   }
-  /* line 386, app/css/main.less */
+  /* line 390, app/css/main.less */
   #topimg {
     margin-top: 40px;
     background-position: cover;
   }
-  /* line 391, app/css/main.less */
+  /* line 395, app/css/main.less */
   #header #sponsorLogoContainer {
     margin-left: -45px;
   }
